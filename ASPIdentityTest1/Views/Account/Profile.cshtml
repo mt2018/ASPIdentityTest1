@@ -1,0 +1,49 @@
+﻿@model ASPIdentityTest1.Models.ApplicationUser;
+
+<h2>My Profile</h2>
+<div>
+    <table style="width:100%">
+        <tr>
+            <th></th>
+            <th>Address:</th>
+        </tr>
+        <tr>
+            <td>
+                <div>First Name: @Model.FirstName</div>
+                <div>Last Name: @Model.LastName</div>
+                <div>Department Name: @Model.DepartmentName</div>
+                <div>Email Address: @Model.Email</div>
+            </td>
+            <td></td>
+            <td>
+                <address style="border-style:solid;  border-width: thin; padding: 10px;">
+                    Street: @Model.Street <br>
+                    City: @Model.City <br>
+                    Province: @Model.Province <br>
+                    Postal Code: @Model.PostalCode
+                </address>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<h3>My Active Cases</h3>
+<h4>@Html.ActionLink("Submit a New CASE", "SubmitCase", "Case")</h4>
+<div>
+    <table style="width:100%">
+        <tr>
+            <th>CASE NUMBER</th>
+            <th>TITLE</th>
+            <th>DATE SUBMITTED</th>
+            <th>STATUS</th>
+            <th>PRIORITY</th>
+        </tr>
+        <tr>
+            <td>ABC-12349-HRT</td>
+            <td>Missed Payment for March 31st</td>
+            <td>2017-04-01</td>
+            <td>In Progress</td>
+            <td>High</td>
+        </tr>
+    </table>
+</div>
